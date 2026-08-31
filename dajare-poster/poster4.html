@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<title>院長の駄洒落 傑作選</title>
+<link rel="stylesheet" href="common.css">
+<div class="page best">
+  <div class="head">
+    <svg class="mug" viewBox="0 0 200 260"></svg>
+    <div class="titlebox"><h1></h1></div>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="foot"><b>殿堂入り <em>駄洒落</em></b><span>#石倉クリニック　#院長語録</span></div>
+</div>
+<script src="scenes.js"></script>
+<script src="doctor.js"></script>
+<script>
+/* 音の一致・意味の二重成立・意外性の3点で全30本を採点し、上位10本のみを収録した傑作選 */
+const PANELS=[
+ {t:['アーカンソー州では','仕事辞めたらあかんそーだ'],b:'辞めたら\nあかんそーだ',
+  scene:'arkansas',pose:'point',expr:'talk',bx:'left:198px;top:8px',rank:'音◎ 意味◎ 意外性◎'},
+ {t:['オハイヨ州で一言','おはよう皆の衆'],b:'おはよう\n皆の衆',
+  scene:'ohio',pose:'open',expr:'talk',bx:'left:206px;top:8px',rank:'州＝衆の二段掛け'},
+ {t:['ピストルを撃てない動物','おら撃たん'],b:'おら撃たん…',
+  scene:'orangutan',pose:'chin',expr:'wry',bx:'left:206px;top:8px',rank:'なぞなぞ＋完全一致'},
+ {t:['髪が戻ってきた','シェーン、髪バック！'],b:'シェーン、\n髪バック！',
+  scene:'western',pose:'point',expr:'talk',bx:'left:212px;top:10px',rank:'名台詞＋植毛'},
+ {t:['カタールで','君の将来を語ーる'],b:'君の将来を\n語ーる',
+  scene:'qatar',pose:'point',expr:'talk',bx:'left:208px;top:12px',rank:'音の完全一致'},
+ {t:['溶ける時計の画家','サルバトール・ザリガニ'],b:'サルバトール\nザリガニ！',
+  scene:'dali',pose:'open',expr:'shock',bx:'left:196px;top:8px',rank:'長尺一致＋落ち'},
+ {t:['上手い話には','ノルマンディー'],b:'うまい話には\nノルマンディー',
+  scene:'normandy',pose:'point',expr:'talk',bx:'left:214px;top:12px',rank:'警句を地名で回収'},
+ {t:['かなりやばいクリニック','略してカナリヤクリニック'],b:'カナリヤ\nクリニック！',
+  scene:'canary',pose:'thumb',expr:'smile',bx:'left:198px;top:8px',rank:'圧縮の妙＋自虐'},
+ {t:['マスクを配って','助かりマスク'],b:'助かりマスク！',
+  scene:'mask',pose:'point',expr:'talk',bx:'left:214px;top:12px',rank:'完全一致＋実用'},
+ {t:['フォロワーの数が','ヘルナンデス'],b:'増えへんデス…\nヘルナンデス',
+  scene:'follower',pose:'chin',expr:'wry',bx:'left:176px;top:8px',rank:'減るんです＝人名'}
+];
+buildPoster('院長の<span class="y">駄洒落</span> <span class="n">傑作選</span>', PANELS, S);
+/* 見出し帯の右端に「なぜ名作か」の一言を添える */
+document.querySelectorAll('.ph').forEach((h,i)=>{
+  if(!PANELS[i].rank) return;
+  const d=document.createElement('div'); d.className='rank'; d.textContent=PANELS[i].rank;
+  h.appendChild(d);
+});
+</script>
