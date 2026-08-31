@@ -1,0 +1,204 @@
+<meta charset="utf-8">
+<title>続・院長の駄洒落10連発</title>
+<link rel="stylesheet" href="common.css">
+<div class="page">
+  <div class="head">
+    <svg class="mug" viewBox="0 0 200 260"></svg>
+    <div class="titlebox"><h1></h1></div>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="foot"><b>新作駄洒落 <em>募集中！</em></b><span>#石倉クリニック　#院長語録</span></div>
+</div>
+<script src="doctor.js"></script>
+<script>
+const S={};
+/* 11 西部劇（シェーン、髪バック！） */
+S.western=`<defs><linearGradient id="w1" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#f2a75c"/><stop offset="1" stop-color="#f7dda9"/></linearGradient></defs>
+ <rect width="540" height="230" fill="url(#w1)"/>
+ <circle cx="392" cy="72" r="40" fill="#ffd98a"/>
+ <g fill="#b9713f" opacity=".85"><path d="M180 128 h70 l16 -30 h40 l14 30 h60 v34 H180z"/>
+  <path d="M430 120 h70 l14 -26 h30 v68 H430z"/></g>
+ <rect y="158" width="540" height="72" fill="#d9a668"/>
+ <path d="M0 158 h540 v8 H0z" fill="#e8bd83"/>
+ <g fill="#3f6b3a" stroke="#274a25" stroke-width="4" stroke-linejoin="round">
+  <path d="M228 200 v-52 q0 -12 12 -12 q12 0 12 12 v52z"/>
+  <path d="M232 168 q-24 0 -24 -20 q0 -14 10 -14 q10 0 10 14 q0 8 6 10z"/>
+  <path d="M250 158 q24 0 24 -22 q0 -14 -10 -14 q-10 0 -10 14 q0 10 -6 12z"/></g>
+ <g transform="translate(404,58)" fill="#2f2a26" stroke="#151312" stroke-width="4" stroke-linejoin="round">
+  <path d="M2 40 q42 -20 84 0 q-8 -14 -26 -18 q6 -24 -16 -24 q-22 0 -16 24 q-18 4 -26 18z"/>
+  <path d="M26 54 q18 -8 36 0 l10 44 q-28 10 -56 0z"/>
+  <path d="M24 56 l-16 40 q-2 8 6 10 q8 2 10 -6 l10 -30z"/>
+  <path d="M64 56 l16 40 q2 8 -6 10 q-8 2 -10 -6 l-10 -30z"/>
+  <path d="M32 96 l-6 44 h16 l4 -34 l4 34 h16 l-6 -44z"/>
+  <path d="M20 140 h20 v10 h-24 q-4 0 -4 -5 q0 -5 8 -5z"/>
+  <path d="M64 140 h20 q8 0 8 5 q0 5 -4 5 h-24z"/>
+ </g>`;
+/* 12 ピアノ（つるっぱドビュッシュー） */
+S.piano=`<rect width="540" height="230" fill="#2b2036"/>
+ <path d="M340 -20 L236 244 L500 244 L420 -20z" fill="#ffeeb0" opacity=".22"/>
+ <rect y="184" width="540" height="46" fill="#3d2f2a"/><path d="M0 184 h540 v6 H0z" fill="#5c4636"/>
+ <g fill="#f2c94c">
+  <path d="M214 40 q22 -8 22 12 q0 12 -12 12 q-10 0 -10 -8 q0 -8 12 -6 v-10z"/>
+  <path d="M488 26 q20 -8 20 10 q0 12 -12 12 q-9 0 -9 -8 q0 -7 11 -5z"/>
+  <path d="M504 36 v-16 l10 -4 v16z"/></g>
+ <g transform="translate(236,74)">
+  <path d="M14 22 C 120 -4, 250 4, 286 44 L 286 56 L 14 56 Z" fill="#3a2f45" stroke="#b9a7d6" stroke-width="4"/>
+  <path d="M18 26 C 120 2, 244 10, 278 44" fill="none" stroke="#d8caf0" stroke-width="4" opacity=".8"/>
+  <rect x="14" y="52" width="272" height="22" fill="#f5f3ee" stroke="#171220" stroke-width="4"/>
+  <g fill="#171220">${[...Array(12)].map((_,i)=>`<rect x="${28+i*21}" y="52" width="9" height="13"/>`).join('')}</g>
+  <rect x="14" y="72" width="272" height="12" fill="#2a2136" stroke="#171220" stroke-width="3"/>
+  <path d="M40 84 l-10 44 M262 84 l12 44" stroke="#2a2136" stroke-width="13" stroke-linecap="round"/>
+  <rect x="112" y="106" width="80" height="10" rx="4" fill="#5c4636" stroke="#2a2136" stroke-width="3"/>
+  <path d="M124 116 v18 M180 116 v18" stroke="#5c4636" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="150" cy="140" rx="150" ry="12" fill="#000" opacity=".3"/>
+ </g>`;
+/* 13 にんにく */
+S.garlic=`<defs><radialGradient id="ga2" cx="50%" cy="30%">
+  <stop offset="0" stop-color="#ffe9c2"/><stop offset="1" stop-color="#e0a35f"/></radialGradient></defs>
+ <rect width="540" height="230" fill="url(#ga2)"/>
+ <rect y="170" width="540" height="60" fill="#8a5a33"/>
+ <path d="M0 170 h540 v7 H0z" fill="#a67243"/>
+ <g transform="translate(300,44)">
+  <path d="M70 22 C 118 22, 146 66, 140 106 C 134 142, 104 156, 70 156 C 36 156, 6 142, 0 106 C -6 66, 22 22, 70 22 Z"
+        fill="#fdfaf2" stroke="#c9bda3" stroke-width="5"/>
+  <path d="M70 22 C 92 44, 96 120, 70 156 M70 22 C 48 44, 44 120, 70 156
+           M24 42 C 36 78, 34 128, 22 148 M116 42 C 104 78, 106 128, 118 148"
+        fill="none" stroke="#dfd6c2" stroke-width="4"/>
+  <path d="M70 22 q-8 -22 6 -30 q10 12 4 30z" fill="#7ea86b" stroke="#4f7a45" stroke-width="4"/>
+  <path d="M158 128 q26 -6 30 12 q3 16 -14 20 q-18 4 -22 -12 q-2 -14 6 -20z" fill="#fdfaf2" stroke="#c9bda3" stroke-width="4"/>
+ </g>
+ <g fill="#fff" opacity=".7"><path d="M228 46 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5z"/></g>`;
+/* 14 演歌（いい加減にエンカ） */
+S.enka=`<rect width="540" height="230" fill="#5c0f18"/>
+ <g fill="#7d1622">${[...Array(9)].map((_,i)=>`<path d="M${180+i*42} 0 q10 60 0 200 h-16 q-10 -140 0 -200z"/>`).join('')}</g>
+ <path d="M180 0 h360 v26 q-90 22 -180 0 q-90 -22 -180 0z" fill="#8f1a28"/>
+ <rect y="186" width="540" height="44" fill="#3a2b12"/><path d="M0 186 h540 v6 H0z" fill="#5c4520"/>
+ <g transform="translate(376,60)">
+  <path d="M20 130 h48 v10 h-48z" fill="#2b2b30"/>
+  <rect x="40" y="26" width="8" height="106" fill="#3a3a42"/>
+  <ellipse cx="44" cy="16" rx="17" ry="20" fill="#c9ced6" stroke="#5a626e" stroke-width="4"/>
+  <path d="M30 10 h28 M30 18 h28 M30 26 h28" stroke="#5a626e" stroke-width="3"/>
+ </g>
+ <g fill="#fff" opacity=".85">${[...Array(16)].map((_,i)=>`<circle cx="${196+((i*67)%330)}" cy="${18+((i*53)%170)}" r="${2+(i%3)}"/>`).join('')}</g>`;
+/* 15 オハイヨ州 */
+S.ohio=`<defs><linearGradient id="oh" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffcf87"/><stop offset="1" stop-color="#cfe7f2"/></linearGradient></defs>
+ <rect width="540" height="230" fill="url(#oh)"/>
+ <circle cx="330" cy="86" r="34" fill="#ffb347"/>
+ <g stroke="#ffd08a" stroke-width="5" opacity=".8">${[...Array(8)].map((_,i)=>`<path d="M330 86 l${Math.round(60*Math.cos(i*0.785))} ${Math.round(60*Math.sin(i*0.785))}"/>`).join('')}</g>
+ <path d="M0 156 q140 -20 280 -4 q140 16 260 -6 v84 H0z" fill="#8fbf5e"/>
+ <path d="M0 186 q160 -16 300 0 q120 12 240 0 v44 H0z" fill="#6fa347"/>
+ <g transform="translate(392,96)">
+  <path d="M0 30 L46 0 L92 30 V96 H0 Z" fill="#c0402f" stroke="#7d1f18" stroke-width="4"/>
+  <path d="M18 46 h56 v50 h-56z" fill="#e8e2d2"/>
+  <path d="M18 46 l56 50 M74 46 l-56 50" stroke="#c0402f" stroke-width="5"/>
+  <rect x="100" y="26" width="30" height="70" fill="#d8d2c2" stroke="#8d8676" stroke-width="4"/>
+  <path d="M98 26 h34 l-17 -16z" fill="#a9a294" stroke="#8d8676" stroke-width="4"/>
+ </g>
+ <g><rect x="222" y="96" width="6" height="80" fill="#8d8676"/>
+  <path d="M228 98 h60 v34 h-60z" fill="#e8ecf0" stroke="#33507a" stroke-width="3"/>
+  <g fill="#c0402f">${[...Array(3)].map((_,i)=>`<rect x="228" y="${102+i*10}" width="60" height="5"/>`).join('')}</g>
+  <rect x="228" y="98" width="24" height="17" fill="#33507a"/></g>`;
+/* 16 アーカンソー州（あかんそーだ） */
+S.arkansas=`<defs><linearGradient id="ar" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#8ec7e8"/><stop offset="1" stop-color="#dceef6"/></linearGradient></defs>
+ <rect width="540" height="230" fill="url(#ar)"/>
+ <g fill="#fff" opacity=".85"><ellipse cx="248" cy="44" rx="34" ry="16"/><ellipse cx="272" cy="38" rx="24" ry="14"/>
+  <ellipse cx="470" cy="30" rx="30" ry="14"/></g>
+ <path d="M0 158 q160 -18 300 -2 q120 14 240 -4 v78 H0z" fill="#7fae5a"/>
+ <path d="M180 230 q60 -50 150 -50 q90 0 120 50z" fill="#c9c2ae"/>
+ <g transform="translate(300,44)">
+  <rect x="0" y="0" width="176" height="88" rx="8" fill="#f4efe0" stroke="#6b5f45" stroke-width="6"/>
+  <rect x="12" y="12" width="152" height="64" rx="4" fill="none" stroke="#c8bfa4" stroke-width="4"/>
+  <path d="M40 44 h72 M100 30 l16 14 l-16 14" fill="none" stroke="#c0402f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="80" y="88" width="14" height="66" fill="#8d7f63"/>
+ </g>
+ <g transform="translate(232,150)">
+  <rect x="0" y="12" width="66" height="46" rx="6" fill="#7a4a24" stroke="#4e2f16" stroke-width="4"/>
+  <path d="M22 12 v-8 q0 -6 6 -6 h10 q6 0 6 6 v8" fill="none" stroke="#4e2f16" stroke-width="5"/>
+  <rect x="0" y="30" width="66" height="7" fill="#4e2f16"/>
+ </g>`;
+/* 17 カンパチ（バチ当たる） */
+S.kanpachi=`<rect width="540" height="230" fill="#123a55"/>
+ <g fill="#0d2c42">${[...Array(6)].map((_,i)=>`<circle cx="${200+i*62}" cy="${30+(i%3)*40}" r="26"/>`).join('')}</g>
+ <path d="M300 20 q-30 22 -6 30 q-26 16 6 26 q40 12 90 -2 q40 -12 26 -30 q-14 -18 -46 -18 q-24 -18 -70 -6z" fill="#4a5c6e"/>
+ <path d="M356 76 l-16 34 h20 l-26 46 l52 -56 h-22 l18 -24z" fill="#ffd233" stroke="#e0a800" stroke-width="3"/>
+ <g transform="translate(240,120)">
+  <ellipse cx="120" cy="52" rx="126" ry="22" fill="#f6f3ec" stroke="#cdc6b6" stroke-width="5"/>
+  <path d="M40 44 C 60 14, 150 8, 190 34 L 216 18 L 210 40 L 216 60 L 190 46 C 150 70, 60 68, 40 44 Z"
+        fill="#8fb8d6" stroke="#3d5f7d" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M52 40 C 90 30, 160 30, 188 38 C 160 48, 90 50, 52 40 Z" fill="#e8d0a0"/>
+  <circle cx="70" cy="36" r="6" fill="#fff" stroke="#3d5f7d" stroke-width="3"/>
+  <path d="M104 18 l14 12 l16 -10" fill="none" stroke="#3d5f7d" stroke-width="4"/>
+ </g>`;
+/* 18 ジーパン（ジジパン） */
+S.jeans=`<defs><linearGradient id="je" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#6fb9e8"/><stop offset="1" stop-color="#d6eefa"/></linearGradient></defs>
+ <rect width="540" height="230" fill="url(#je)"/>
+ <g fill="#fff" opacity=".9"><ellipse cx="470" cy="40" rx="36" ry="18"/><ellipse cx="440" cy="46" rx="24" ry="13"/></g>
+ <path d="M180 34 q180 26 360 4" fill="none" stroke="#6b5f45" stroke-width="5"/>
+ <rect y="190" width="540" height="40" fill="#8fbf5e"/>
+ ${[0,1].map(k=>`<g transform="translate(${232+k*138},48)">
+   <path d="M0 0 h84 l8 40 l-6 108 h-30 l-10 -84 l-10 84 h-30 l-6 -108z"
+         fill="${k?'#5c7fae':'#3f6ea3'}" stroke="#22456e" stroke-width="5" stroke-linejoin="round"/>
+   <path d="M2 24 h80" stroke="#22456e" stroke-width="4"/>
+   <path d="M42 40 v104" stroke="#22456e" stroke-width="3" opacity=".7"/>
+   <g fill="#f2c94c"><rect x="10" y="8" width="14" height="10" rx="2"/><rect x="60" y="8" width="14" height="10" rx="2"/></g>
+   <rect x="-8" y="-10" width="10" height="22" rx="4" fill="#c9ced6"/>
+   <rect x="82" y="-10" width="10" height="22" rx="4" fill="#c9ced6"/>
+  </g>`).join('')}`;
+/* 19 オランウータン（おら撃たん） */
+S.orangutan=`<rect width="540" height="230" fill="#15351f"/>
+ <g fill="#1e4a2b">${[...Array(6)].map((_,i)=>`<path d="M${190+i*62} 230 q16 -74 38 -100 q22 26 38 100z"/>`).join('')}</g>
+ <path d="M180 44 q170 -26 360 6" fill="none" stroke="#5c4326" stroke-width="15" stroke-linecap="round"/>
+ <path d="M300 48 q-16 22 -34 26" fill="none" stroke="#5c4326" stroke-width="9" stroke-linecap="round"/>
+ <rect y="200" width="540" height="30" fill="#0f2717"/>
+ <g transform="translate(292,44)">
+  <ellipse cx="96" cy="150" rx="66" ry="52" fill="#b5651f" stroke="#7a4210" stroke-width="5"/>
+  <path d="M50 128 C 18 120, 10 74, 22 46" fill="none" stroke="#b5651f" stroke-width="26" stroke-linecap="round"/>
+  <path d="M22 46 a13 13 0 1 0 2 -2" fill="#c9761f" stroke="#7a4210" stroke-width="4"/>
+  <path d="M142 132 C 172 132, 184 158, 176 180" fill="none" stroke="#b5651f" stroke-width="26" stroke-linecap="round"/>
+  <path d="M40 178 q-18 14 -6 22 M152 182 q20 12 8 22" stroke="#b5651f" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <ellipse cx="96" cy="72" rx="60" ry="48" fill="#c9761f" stroke="#7a4210" stroke-width="5"/>
+  <ellipse cx="96" cy="80" rx="35" ry="35" fill="#e9b077"/>
+  <ellipse cx="83" cy="72" rx="5" ry="8" fill="#2d1a08"/><ellipse cx="109" cy="72" rx="5" ry="8" fill="#2d1a08"/>
+  <path d="M80 94 q16 12 32 0" fill="none" stroke="#2d1a08" stroke-width="5" stroke-linecap="round"/>
+  <path d="M90 80 q6 6 12 0" fill="none" stroke="#2d1a08" stroke-width="4"/>
+  <path d="M36 54 q-16 -18 -2 -32 q14 -12 26 4" fill="#c9761f" stroke="#7a4210" stroke-width="5"/>
+  <path d="M156 54 q16 -18 2 -32 q-14 -12 -26 4" fill="#c9761f" stroke="#7a4210" stroke-width="5"/>
+ </g>`;
+/* 20 大仏（オーマイブッタ） */
+S.buddha=`<defs><linearGradient id="bd" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#f6d9a0"/><stop offset="1" stop-color="#e6c48a"/></linearGradient></defs>
+ <rect width="540" height="230" fill="#e9d7b0"/>
+ <path d="M180 62 h360 v-10 l-180 -44 l-180 44z" fill="#8c3b2e" stroke="#5e2419" stroke-width="4"/>
+ <rect x="180" y="62" width="360" height="12" fill="#a94b36"/>
+ <rect y="196" width="540" height="34" fill="#b9a887"/>
+ <g transform="translate(288,44) scale(1.12)">
+  <circle cx="112" cy="60" r="82" fill="none" stroke="#d9b978" stroke-width="6" opacity=".9"/>
+  <path d="M112 152 C 46 152, 22 132, 30 108 C 42 76, 84 68, 112 68 C 140 68, 182 76, 194 108 C 202 132, 178 152, 112 152 Z"
+        fill="#5f7a63" stroke="#3c5241" stroke-width="5"/>
+  <ellipse cx="112" cy="44" rx="52" ry="50" fill="#6d8a70" stroke="#3c5241" stroke-width="5"/>
+  <path d="M64 34 q48 -34 96 0 q-8 -34 -48 -34 q-40 0 -48 34z" fill="#5f7a63"/>
+  <g fill="#4e6a53">${[...Array(9)].map((_,i)=>`<circle cx="${72+ (i%5)*20}" cy="${10 + (i>4?14:0)}" r="6"/>`).join('')}</g>
+  <path d="M84 44 q12 -8 22 0 M118 44 q12 -8 22 0" fill="none" stroke="#2f4034" stroke-width="4" stroke-linecap="round"/>
+  <path d="M86 52 q10 6 20 0 M118 52 q10 6 20 0" fill="none" stroke="#2f4034" stroke-width="4" stroke-linecap="round"/>
+  <path d="M100 66 q12 10 24 0" fill="none" stroke="#2f4034" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="112" cy="28" r="5" fill="#f2c94c"/>
+ </g>`;
+
+const PANELS=[
+ {t:['髪が戻ってきた','シェーン、髪バック！'],b:'シェーン、\n髪バック！',scene:'western',pose:'point',expr:'talk',bx:'left:212px;top:10px'},
+ {t:['つるっぱげの作曲家','つるっぱドビュッシュー'],b:'つるっぱ\nドビュッシュー',scene:'piano',pose:'open',expr:'talk',bx:'left:200px;top:8px'},
+ {t:['うまいなあ、この味','にんにくのガーリック味'],b:'にんにくの\nガーリック味！',scene:'garlic',pose:'thumb',expr:'smile',bx:'left:196px;top:8px'},
+ {t:['演歌の話はもう','いい加減にエンカ'],b:'いい加減に\nエンカ！',scene:'enka',pose:'point',expr:'talk',bx:'left:206px;top:10px'},
+ {t:['オハイヨ州で一言','おはよう皆の衆'],b:'おはよう\n皆の衆',scene:'ohio',pose:'open',expr:'talk',bx:'left:206px;top:8px'},
+ {t:['アーカンソー州では','仕事辞めたらあかんそーだ'],b:'辞めたら\nあかんそーだ',scene:'arkansas',pose:'point',expr:'talk',bx:'left:198px;top:8px'},
+ {t:['カンパチ食べたら','バチ当たる'],b:'カンパチで\nバチ当たる',scene:'kanpachi',pose:'chin',expr:'shock',bx:'left:204px;top:8px'},
+ {t:['ジーパン履く','ジジパン履く'],b:'ジーパン履く\nジジパン履く',scene:'jeans',pose:'thumb',expr:'smile',bx:'left:196px;top:8px'},
+ {t:['ピストル撃てない動物','おら撃たん'],b:'おら撃たん…',scene:'orangutan',pose:'chin',expr:'wry',bx:'left:206px;top:8px'},
+ {t:['大仏さまが一言','オーマイブッタ、どこぶった？'],b:'オーマイブッタ！\nどこぶった？',scene:'buddha',pose:'open',expr:'shock',bx:'left:192px;top:8px'}
+];
+buildPoster('続・院長の<span class="y">駄洒落</span><span class="n">10</span>連発', PANELS, S);
+</script>
